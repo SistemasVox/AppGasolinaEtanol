@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Gasolina Etanol</string>
+    <string name="quantidade_gasolina">Quantidade de gasolina: %s litros</string>
+    <string name="quantidade_etanol">Quantidade de etanol: %s litros</string>
+    <string name="custo_gasolina">Custo de gasolina: R$ %s</string>
+    <string name="custo_etanol">Custo de etanol: R$ %s</string>
+    <string name="custo_total">Custo total: R$ %s</string>
+    <!-- Adicione outras strings conforme necessário -->
+    <string name="teor_gasolina">Teor de Gasolina</string>
+    <string name="_propocaogasolina">Propoção Gasolina Mínima</string>
+    <string name="total_litros">Total de Litros</string>
+    <string name="preco_gasolina">Preço da Gasolina (R$)</string>
+    <string name="preco_etanol">Preço do Etanol (R$)</string>
+    <string name="_teor_gasolina">0.27</string>
+    <string name="_pureza_gasolina">0.50</string>
+    <string name="label_resultado_inicial">Resultados:</string>
+    <string name="label_quantidade_gasolina">Quantidade de gasolina:</string>
+    <string name="label_quantidade_etanol">Quantidade de etanol:</string>
+    <string name="label_custo_gasolina">Custo de gasolina:</string>
+    <string name="label_custo_etanol">Custo de etanol:</string>
+    <string name="label_custo_total">Custo total:</string>
+    <string name="_calcular">Calcular</string>
+    <string name="_precoetanol">3.06</string>
+    <string name="_preco_gasolina">4.99</string>
+    <string name="_total_litros">48.0</string>
+    <string name="hint_teor_gasolina">Insira o teor de gasolina</string>
+    <string name="hint_pureza_gasolina">Insira proporção da gasolina</string>
+</resources>

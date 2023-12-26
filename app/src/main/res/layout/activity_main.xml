@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Guideline para dividir a tela em 50% -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <!-- ScrollView para os elementos de entrada -->
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTeorGasolina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/teor_gasolina"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTeorGasolina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autofillHints="percentage"
+                android:hint="@string/hint_teor_gasolina"
+                android:inputType="numberDecimal"
+                android:text="@string/_teor_gasolina"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewTeorGasolina" />
+
+            <TextView
+                android:id="@+id/textViewPropocaoGasolina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/_propocaogasolina"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextTeorGasolina" />
+
+            <EditText
+                android:id="@+id/editTextPropocaoGasolina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autofillHints="percentage"
+                android:hint="@string/hint_pureza_gasolina"
+                android:inputType="numberDecimal"
+                android:text="@string/_pureza_gasolina"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewPropocaoGasolina" />
+
+            <TextView
+                android:id="@+id/textViewTotalLitros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/total_litros"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextPropocaoGasolina" />
+
+            <EditText
+                android:id="@+id/editTextTotalLitros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autofillHints="quantity"
+                android:hint="@string/_total_litros"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewTotalLitros" />
+
+            <TextView
+                android:id="@+id/textViewPrecoGasolina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/preco_gasolina"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextTotalLitros" />
+
+            <EditText
+                android:id="@+id/editTextPrecoGasolina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autofillHints="price"
+                android:hint="@string/_preco_gasolina"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewPrecoGasolina" />
+
+            <TextView
+                android:id="@+id/textViewPrecoEtanol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/preco_etanol"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextPrecoGasolina" />
+
+            <EditText
+                android:id="@+id/editTextPrecoEtanol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autofillHints="price"
+                android:hint="@string/_precoetanol"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewPrecoEtanol" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botão de cálculos de dados -->
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#3498db"
+        android:onClick="calcularCombustivel"
+        android:padding="12dp"
+        android:text="@string/_calcular"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline50" />
+
+    <!-- ScrollView para envolver a saída de dados -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonCalcular">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Coloque aqui todos os TextViews para saída de dados -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_resultado_inicial"
+                android:textSize="18sp" />
+
+            <!-- Resultados -->
+            <TextView
+                android:id="@+id/textViewResultadoGasolina"
+                style="@style/ResultadoTextView"
+                android:text="@string/label_quantidade_gasolina" />
+
+            <TextView
+                android:id="@+id/textViewResultadoEtanol"
+                style="@style/ResultadoTextView"
+                android:text="@string/label_quantidade_etanol" />
+
+            <TextView
+                android:id="@+id/textViewResultadoCustoGasolina"
+                style="@style/ResultadoTextView"
+                android:text="@string/label_custo_gasolina" />
+
+            <TextView
+                android:id="@+id/textViewResultadoCustoEtanol"
+                style="@style/ResultadoTextView"
+                android:text="@string/label_custo_etanol" />
+
+            <TextView
+                android:id="@+id/textViewResultadoCustoTotal"
+                style="@style/ResultadoTextView"
+                android:text="@string/label_custo_total" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
