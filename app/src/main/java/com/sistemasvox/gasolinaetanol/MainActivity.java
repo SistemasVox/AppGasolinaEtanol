@@ -22,8 +22,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewResultadoCustoGasolina;
     private TextView textViewResultadoCustoEtanol;
     private TextView textViewResultadoCustoTotal;
+    private TextView textViewCompensaEtanol;
     private EditText editTextPrecoGasolina;
     private EditText editTextPrecoEtanol;
+    Button btnCalcular;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +39,13 @@ public class MainActivity extends AppCompatActivity {
         editTextTotalLitros = findViewById(R.id.editTextTotalLitros);
         editTextPrecoGasolina = findViewById(R.id.editTextPrecoGasolina);
         editTextPrecoEtanol = findViewById(R.id.editTextPrecoEtanol);
-        Button btnCalcular = findViewById(R.id.buttonCalcular);
+        btnCalcular = findViewById(R.id.buttonCalcular);
         textViewResultadoGasolina = findViewById(R.id.textViewResultadoGasolina);
         textViewResultadoEtanol = findViewById(R.id.textViewResultadoEtanol);
         textViewResultadoCustoGasolina = findViewById(R.id.textViewResultadoCustoGasolina);
         textViewResultadoCustoEtanol = findViewById(R.id.textViewResultadoCustoEtanol);
         textViewResultadoCustoTotal = findViewById(R.id.textViewResultadoCustoTotal);
+        textViewCompensaEtanol = findViewById(R.id.textViewCompensaEtanol);
 
         // Define a ação do botão ao ser clicado
         btnCalcular.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +109,17 @@ public class MainActivity extends AppCompatActivity {
             textViewResultadoCustoGasolina.setText(getString(R.string.custo_gasolina, String.format(Locale.getDefault(), "R$ %.2f", custoGasolina)));
             textViewResultadoCustoEtanol.setText(getString(R.string.custo_etanol, String.format(Locale.getDefault(), "R$ %.2f", custoEtanol)));
             textViewResultadoCustoTotal.setText(getString(R.string.custo_total, String.format(Locale.getDefault(), "R$ %.2f", custoTotal)));
+
+            // Calcula a porcentagem do preço do etanol em relação ao preço da gasolina
+            float porcentagemEtanol = (precoEtanol / precoGasolina) * 100;
+
+            // Verifica se compensa usar etanol
+            boolean compensaEtanol = precoEtanol < precoGasolina * 0.7;
+            String mensagem = compensaEtanol ? "Compensa utilizar etanol." : "Não compensa utilizar etanol.";
+            mensagem += String.format(Locale.getDefault(), " (Etanol é %.2f%% do preço da gasolina)", porcentagemEtanol);
+
+            textViewCompensaEtanol.setText(mensagem);
+
 
         } catch (NumberFormatException e) {
             // Exibe uma mensagem de erro se houver problemas na conversão de string para float

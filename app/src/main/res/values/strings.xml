@@ -25,4 +25,5 @@
     <string name="_total_litros">48.0</string>
     <string name="hint_teor_gasolina">Insira o teor de gasolina</string>
     <string name="hint_pureza_gasolina">Insira proporção da gasolina</string>
+    <string name="label_etanol_rentavel">Etanol: Vale a pena?</string>
 </resources>

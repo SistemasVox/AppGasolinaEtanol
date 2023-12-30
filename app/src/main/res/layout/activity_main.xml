@@ -217,6 +217,11 @@
                 android:id="@+id/textViewResultadoCustoTotal"
                 style="@style/ResultadoTextView"
                 android:text="@string/label_custo_total" />
+
+            <TextView
+                android:id="@+id/textViewCompensaEtanol"
+                style="@style/ResultadoTextView"
+                android:text="@string/label_etanol_rentavel" />
         </LinearLayout>
     </ScrollView>
 
